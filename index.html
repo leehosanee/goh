@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>빈센트 반고흐 </title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	//상단오른쪽 햄버거아이콘 클릭,
+	$("header button").click(function(){
+		//<nav>이 내려왔다면=> <nav>있다면
+		if( $("nav").css("display")=="block" ){
+			$("nav").stop().slideUp();//결과 {display:none;}
+			$(this).text("menu");//결과는 햄버거 아이콘이된다
+		}
+		else{
+			$("nav").stop().slideDown();//결과 {display:block;}
+			$(this).text("close");//결과는 ekerldkdlzhsehla
+		}
+	});
+});
+</script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+*{padding:0; margin:0;}
+body {background:black;font:10pt"나눔고딕";}
+img {display:block;max-width:100%;}
+
+/*레이아웃*/
+#layout {width:414px;margin:auto;position:relative;border:1px solid yellow;}
+
+/*상단*/
+header {display:flex;padding-top:25px;border-bottom:2px solid gray;}
+header h1{flex:1;}
+header h1 img {margin:auto;}
+haeder button {color:white;font-size:2.5rem; background:transparent; border:none;}
+
+/*내비게이션*/
+nav {background:#162039;position:absolute; width:100%;padding:40px 0px;display:none;}
+nav ul {line-height:450%;padding-left:17%; color:white;list-style-image:url("images/icon_star.jpg");}
+nav a {color:White;text-decoration:none; font-size:1.25rem;display:block;}
+
+/*콘텐츠*/
+section {border:1px solid blue;}
+section h2 {display:none;}
+</style>
+</head>
+<body>
+	<div id="layout">
+		<header>
+			<h1><a href="index.html"><img src="images/logo.jpg" alt="빈센트 반 고흐"></a></h1>
+			<button type="button" class="material-icons">menu</button>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="history.html">빈센트 반고흐</a></li>
+				<li><a href="life.html">그의 일생</a></li>
+				<li><a href="art.html">그의 작품</a></li>
+				<li><a href="display.html">빈센트 반고흐 전시회</a></li>
+			</ul>
+		</nav>
+		<section>
+			<h2>메인</h2>
+			<img src="images/main.jpg" alt="유화-별이 빛나는 밤에">
+		</section>
+	</div>
+</body>
+</html>
